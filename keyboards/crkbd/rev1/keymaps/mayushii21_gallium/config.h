@@ -49,13 +49,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* #endif */
 
 // #define KEY_OVERRIDE_INCLUDE_WEAK_MODS
-#define TAPPING_TERM 170
+#define TAPPING_TERM 150
 #define TAPPING_TERM_PER_KEY
 #define QUICK_TAP_TERM_PER_KEY
-/*#define RETRO_TAPPING*/
-/*#define RETRO_TAPPING_PER_KEY*/
+// #define RETRO_TAPPING
+// #define RETRO_TAPPING_PER_KEY
 
-#define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
+// #define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
 #define CAPS_WORD_INVERT_ON_SHIFT
 #define CAPS_WORD_IDLE_TIMEOUT 0
 
@@ -65,14 +65,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define NO_ALT_REPEAT_KEY // reduce firmware size
 #define PERMISSIVE_HOLD
-#define ACHORDION_STREAK
+#define CHORDAL_HOLD
+#define FLOW_TAP_TERM 100
 
 // MouseKey stuff
 #define MOUSEKEY_DELAY          3
 #define MOUSEKEY_INTERVAL       4  // 1//240(refresh rate)*1000
 #define MOUSEKEY_WHEEL_DELAY    0
-#define MOUSEKEY_MAX_SPEED      5
-#define MOUSEKEY_TIME_TO_MAX    32
+#define MOUSEKEY_MAX_SPEED      15
+#define MOUSEKEY_TIME_TO_MAX    64
 
 
 /*#define MK_KINETIC_SPEED*/
