@@ -35,6 +35,7 @@ enum layers {
     MOUSE,
     GAMING,
     BASE_BASE,
+    QWERTY,
     NUM_LAYERS  // Total number of layers
 };
 
@@ -315,7 +316,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       _______, MS_WHLD, MS_LEFT, MS_DOWN, MS_RGHT,TO(BASE_BASE),                 KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT, XXXXXXX, _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______, XXXXXXX, XXXXXXX, MS_BTN4, MS_BTN5, XXXXXXX,                  C(KC_LEFT),C(KC_DOWN),C(KC_UP),C(KC_RIGHT),XXXXXXX,_______,
+      _______, XXXXXXX, XXXXXXX, MS_BTN4, MS_BTN5,TO(QWERTY),                  C(KC_LEFT),C(KC_DOWN),C(KC_UP),C(KC_RIGHT),XXXXXXX,_______,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           _______, _______, _______,    QK_LLCK, MS_BTN1, MS_BTN2
                                       //`--------------------------'  `--------------------------'
@@ -356,6 +357,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                   XXXXXXX,OSM(MOD_LSFT),LCTL_T(KC_ESC),     KC_ENT,  KC_SPC,XXXXXXX
                                       //`--------------------------'  `--------------------------'
 
+  ),
+
+    [QWERTY] = LAYOUT_split_3x6_3(
+  //,--------------------------------------------------------.                    ,------------------------------------------------------.
+      KC_VOLD,    KC_Q,     KC_W,     KC_E,     KC_R,    KC_T,                          KC_Y,    KC_U,     KC_I,    KC_O,    KC_P, KC_VOLU,
+  //|--------+--------+---------+---------+---------+--------|                    |--------+--------+---------+--------+--------+--------|
+       KC_TAB,    KC_A,     KC_S,     KC_D,     KC_F,    KC_G,                          KC_H,    KC_J,     KC_K,    KC_L, KC_SCLN, KC_COLN,
+  //|--------+--------+---------+---------+---------+--------|                    |--------+--------+---------+--------+--------+--------|
+      CW_TOGG,    KC_Z,     KC_X,     KC_C,     KC_V,    KC_B,                          KC_N,    KC_M,  KC_COMM,  KC_DOT, KC_SLSH, TO(BASE),
+  //|--------+--------+---------+---------+---------+--------+--------|  |--------+--------+--------+---------+--------+--------+--------|
+                                  XXXXXXX,OSM(MOD_LSFT),LCTL_T(KC_ESC),      KC_ENT,  KC_SPC,RMAGIC
+                                      //`--------------------------'  `--------------------------'
   )
 };
 
